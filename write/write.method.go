@@ -6,7 +6,7 @@ import (
 	"github.com/jmoiron/sqlx"
 )
 
-// do not use this method if you do not know what you're doing
+// GetDB MARK:  do not use this method if you do not know what you're doing
 func (w *Write) GetDB() *sqlx.DB {
 	return w.db
 }

@@ -1,4 +1,4 @@
-module adhalia
+module github.com/PT-Pramers-Sejati-Indah/adhalia
 
 go 1.22.4
 
