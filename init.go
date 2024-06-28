@@ -12,6 +12,13 @@ type Adhalia struct {
 	Writer *write.Write
 }
 
+func NewDatabaseUsingInstance(readerDb *sqlx.DB, writerDb *sqlx.DB) *Adhalia {
+	return &Adhalia{
+		Reader: read.New(readerDb),
+		Writer: write.New(writerDb),
+	}
+}
+
 func NewDatabase(
 	readerDriverName string,
 	readerDataSourceName string,
