@@ -2,6 +2,7 @@ package read
 
 import (
 	"context"
+	"github.com/jmoiron/sqlx"
 )
 
 func (r *Read) Get(ctx context.Context, dest interface{}, query string, args ...interface{}) error {
@@ -20,6 +21,11 @@ func (r *Read) Prepare(ctx context.Context, query string) (*ReadStmt, error) {
 	return &ReadStmt{
 		stmt: stmt,
 	}, nil
+}
+
+// do not use this method if you do not know how to use it
+func (r *Read) GetDB() *sqlx.DB {
+	return r.db
 }
 
 func (r *ReadStmt) Get(ctx context.Context, dest interface{}, args ...interface{}) error {
