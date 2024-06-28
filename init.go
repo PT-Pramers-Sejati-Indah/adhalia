@@ -1,8 +1,8 @@
 package adhalia
 
 import (
-	"adhalia/read"
-	"adhalia/write"
+	"github.com/PT-Pramers-Sejati-Indah/adhalia/read"
+	"github.com/PT-Pramers-Sejati-Indah/adhalia/write"
 	"github.com/jmoiron/sqlx"
 )
 
